@@ -18,8 +18,8 @@ struct TotalDataView: View {
         VStack {
             HStack {
                 TotalDataCardView(numberStr: totalData.confirmed.formatNumber(), name: "Confirmed")
-                TotalDataCardView(numberStr: totalData.confirmed.formatNumber(), name: "Critical", color: .yellow)
-                TotalDataCardView(numberStr: totalData.confirmed.formatNumber(), name: "Deaths", color: .red)
+                TotalDataCardView(numberStr: totalData.critical.formatNumber(), name: "Critical", color: .yellow)
+                TotalDataCardView(numberStr: totalData.deaths.formatNumber(), name: "Deaths", color: .red)
             }
             HStack {
                 TotalDataCardView(numberStr: String(format: "%.2f", totalData.fatalityRate), name: "Death %")
