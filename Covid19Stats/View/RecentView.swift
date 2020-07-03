@@ -20,12 +20,15 @@ struct RecentView: View {
         NavigationView {
             VStack {
                 
+                // Search Button Clicked
                 if isSearchVisible {
                     SearchView(searchText: $searchText)
                 }
                 
+                // Total Data with Geometry
                 TotalDataView(totalData: covidFetch.totalData)
                 
+                // Header List Country, Conf, Death, Recover
                 HeaderListView()
                 
                 List {
@@ -35,7 +38,12 @@ struct RecentView: View {
                         
                     }, id : \.country) { countryData in
                         
-                        CountryDataRowView(countryData: countryData)
+                        // Country Detail View Present with Navigation Link
+                        
+                        NavigationLink(destination: CountryDetailView(countryData: countryData)) {
+                            CountryDataRowView(countryData: countryData)
+                        }
+                        
                     }
                 }
                 
@@ -43,6 +51,7 @@ struct RecentView: View {
                 
             } // Enf of VStack
                 
+                // Navigation Bar and Search Button Toggle Action
                 .navigationBarTitle("Recent Data", displayMode: .inline)
                 .navigationBarItems(trailing:
                     Button(action: {
