@@ -12,6 +12,7 @@ struct RecentView: View {
     
     @ObservedObject var covidFetch = CovidFetchRequest()
     @State var searchText = ""
+    @State var isSearchVisible = false
     
     var body: some View {
         
@@ -19,8 +20,15 @@ struct RecentView: View {
         NavigationView {
             VStack {
                 
+                // Search Button Clicked
+                if isSearchVisible {
+                    SearchView(searchText: $searchText)
+                }
+                
+                // Total Data with Geometry
                 TotalDataView(totalData: covidFetch.totalData)
                 
+                // Header List Country, Conf, Death, Recover
                 HeaderListView()
                 
                 List {
@@ -30,16 +38,34 @@ struct RecentView: View {
                         
                     }, id : \.country) { countryData in
                         
-                        CountryDataRowView(countryData: countryData)
+                        // Country Detail View Present with Navigation Link
+                        
+                        NavigationLink(destination: CountryDetailView(countryData: countryData)) {
+                            CountryDataRowView(countryData: countryData)
+                        }
+                        
                     }
                 }
                 
                 
                 
             } // Enf of VStack
-            
+                
+                // Navigation Bar and Search Button Toggle Action
                 .navigationBarTitle("Recent Data", displayMode: .inline)
-            
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        
+                        self.isSearchVisible.toggle()
+                        
+                        if !self.isSearchVisible {
+                            self.searchText = ""
+                        }
+                        
+                    }, label: {
+                        Image(systemName: "magnifyingglass")
+                    })
+            )
         } // End of Navigation View
     }
 }

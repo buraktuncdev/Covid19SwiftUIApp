@@ -14,16 +14,18 @@ struct HeaderListView: View {
             Text("Country")
                 .fontWeight(.bold)
                 .font(.subheadline)
-                .frame(width: 110, alignment: .leading)
-                .padding(.leading, 15)
+                .frame(width: 90, alignment: .leading)
+                .padding(.leading, 5)
+                .foregroundColor(.white)
             
             Spacer()
             
-            Text("Conf.")
+            Text("Confirmed")
             .fontWeight(.bold)
             .font(.subheadline)
                 .frame(height: 40)
-            .padding(.leading, 5)
+            .padding(.leading, 1)
+            .foregroundColor(.white)
             
             Spacer()
             
@@ -31,7 +33,8 @@ struct HeaderListView: View {
             .fontWeight(.bold)
             .font(.subheadline)
             .frame(height: 40)
-            .padding(.leading, 5)
+            .padding(.leading, 1)
+            .foregroundColor(.white)
             
             Spacer()
             
@@ -39,9 +42,10 @@ struct HeaderListView: View {
             .fontWeight(.bold)
             .font(.subheadline)
             .frame(height: 40)
-            .padding(.trailing, 15)
+            .padding(.trailing, 20)
+            .foregroundColor(.white)
         }
-        .background(Color(.gray))
+        .background(Color(.black))
     }
 }
 

@@ -14,10 +14,7 @@ class CovidFetchRequest: ObservableObject {
     
     @Published var allCountries: [CountryData] = []
     @Published var totalData: TotalData = testTotalData
-    
-    
-    
-    
+
     init() {
         getCurrentTotal()
         getAllCountries()

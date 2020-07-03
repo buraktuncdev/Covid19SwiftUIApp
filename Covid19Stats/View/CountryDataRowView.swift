@@ -18,7 +18,7 @@ struct CountryDataRowView: View {
                 .fontWeight(.medium)
                 .font(.subheadline)
                 .lineLimit(2)
-                .frame(width: 100, alignment: .leading)
+                .frame(width: 90, alignment: .leading)
             
             Spacer()
             
