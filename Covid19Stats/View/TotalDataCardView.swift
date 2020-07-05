@@ -18,7 +18,7 @@ struct TotalDataCardView: View {
         
         GeometryReader {
             geometry in
-            
+           
             VStack {
                 
                 Text(self.numberStr)

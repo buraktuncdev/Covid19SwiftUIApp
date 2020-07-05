@@ -25,7 +25,7 @@ struct CountryDataRowView: View {
             Text(countryData.confirmed.formatNumber())
             .font(.subheadline)
             .frame(height: 40)
-            .padding(.leading, 5)
+            .padding(.leading, 1)
             
             Spacer()
             
@@ -33,7 +33,7 @@ struct CountryDataRowView: View {
             .frame(width: 70, height: 50, alignment: .center)
             .font(.subheadline)
             .foregroundColor(.red)
-            .padding(.leading, 5)
+            .padding(.leading, 1)
             
             Spacer()
             
