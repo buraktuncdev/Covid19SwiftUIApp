@@ -14,7 +14,7 @@ struct HeaderListView: View {
             Text("Country")
                 .fontWeight(.bold)
                 .font(.subheadline)
-                .frame(width: 90, alignment: .leading)
+                .frame(width: 70, alignment: .leading)
                 .padding(.leading, 5)
                 .foregroundColor(.white)
             
