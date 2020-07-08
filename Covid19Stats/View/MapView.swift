@@ -11,10 +11,7 @@ import UIKit
 import MapKit
 
 struct MapView: UIViewRepresentable {
-    
-   
-    
-  
+      
     @Binding var countryData: [CountryData]
     
     func updateUIView(_ uiView: MKMapView, context: UIViewRepresentable<MapView>) {
@@ -43,7 +40,6 @@ struct MapView: UIViewRepresentable {
     
     
 }
-
 
 class CoronaCaseAnnotation: NSObject, MKAnnotation {
     
