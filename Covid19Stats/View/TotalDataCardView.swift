@@ -32,6 +32,7 @@ struct TotalDataCardView: View {
                     .fontWeight(.bold)
                     .padding(5)
                     .foregroundColor(self.color)
+          
                 
             } // End of VStack
             
