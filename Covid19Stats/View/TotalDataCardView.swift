@@ -20,7 +20,6 @@ struct TotalDataCardView: View {
             geometry in
            
             VStack {
-                
                 Text(self.numberStr)
                     .font(.subheadline)
                     .fontWeight(.bold)
